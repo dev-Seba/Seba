@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wzrost</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Badanie wzrostu</h1>  
+
+
+    Wprowadż swój wzrost:
+    <input type = "text" id="wzrost"><br>
+    <input type= "button" value="sprawdż" onclick="sprawdzenie()">
+
+    <p id="wynik"></p>
+
+    <script>
+    function sprawdzenie(){
+        const wzrost = document.getElementById("wzrost").value;
+        document.getElementById("wynik").innerHTML = wzrost;
+        if (wzrost<160){
+            document.getElementById("wynik").innerHTML = "jesteś niski";
+        }
+        else{
+            document.getElementById("wynik").innerHTML = "jesteś wysoki";
+        } 
+    }
+
+
+    </script>
+</body>
+</html>
